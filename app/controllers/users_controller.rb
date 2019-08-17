@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
-      session[:user_id] = @user.id  
+      session[:user_id] = @user.id
       redirect_to controller: 'welcome', action: 'home'
     else
       render 'new'
@@ -19,4 +19,3 @@ class UsersController < ApplicationController
   end
 
 end
- 
